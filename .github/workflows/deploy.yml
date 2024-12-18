@@ -25,3 +25,9 @@ jobs:
             npm install
             npm run build
             pm2 restart all
+
+      - name: Notify Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{"content": "✅ Deployment to production is complete!"}' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
