@@ -15,6 +15,7 @@ export default function Home() {
         />
         <div>
           hello everybody
+            auto deployed!
         </div>
       </main>
     </div>
